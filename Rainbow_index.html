@@ -2,30 +2,27 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-	<style type="text/css">
-		body {
-			background-color: red;
-			transition: background-color 7s;
-		}
-	</style>
-</head>
-<body>
-	<script type="text/javascript">
-		var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+    <style>
+      body {
+        animation: rainbow 10s ease infinite;
+      }
 
-		var i = 1;
-
-		window.setInterval(function(){
-			document.body.style.backgroundColor = colors[i];
-			i++;
-			if (i === colors.length){
-				i=0;
-			}
-		}, 5000);
-	</script>
-</body>
-	<html>
+      @keyframes rainbow {
+        0% { background-color: #ff0000; } /* red */
+        10% { background-color: #ff7f00; } /* orange */
+        20% { background-color: #ffff00; } /* yellow */
+        30% { background-color: #00ff00; } /* green */
+        40% { background-color: #007fff; } /* blue-green */
+        50% { background-color: #0000ff; } /* blue */
+        60% { background-color: #8b00ff; } /* indigo */
+        70% { background-color: #ff00ff; } /* violet */
+        80% { background-color: #ffffff; } /* white */
+        90% { background-color: #808080; } /* gray */
+        100% { background-color: #000000; } /* black */
+      }
+    </style>
+  <body>
+</html>
 
 <head>
 	 <title>
