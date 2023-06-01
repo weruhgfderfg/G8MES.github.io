@@ -312,7 +312,7 @@
 
 <button onclick="location.href = 'https://www.mathplayground.com/';" id="myButton" class="float-left submit-button" >Math Playground</button>
 	
-	<a href="page1.html"> TURN OFF RAINBOW </a>
+	<a href="index.html"> TURN OFF RAINBOW </a>
 
 
     <p>
