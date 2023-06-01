@@ -2,35 +2,44 @@
 <!DOCTYPE html>
 
 <html>
-	<style>
-      body {
-        animation: rainbow 10s ease infinite;
-      }
+    <meta charset="UTF-8" />
+    <style>
+        * { box-sizing: border-box; }
 
-      @keyframes rainbow {
-        0% { background-color: hsla(0, 100%, 50%, 0.362); } /* red */
-        5% { background-color: #e87800; } /* orange */
-        10% { background-color: #c5b100; } /* yellow */
-        15% { background-color: #17a900; } /* green */
-        20% { background-color: #008793; } /* blue-green */
-        25% { background-color: #14006d; } /* blue */
-        30% { background-color: #29004a; } /* indigo */
-        35% { background-color: #23002b; } /* violet */
-        40% { background-color: #1c000a; } /* white */
-        45% { background-color: #140003; } /* gray */
-        50% { background-color: #000000; } /* black */
-        55% { background-color: #140000; } /* gray */
-        60% { background-color: #1c0000; } /* white */
-        65% { background-color: #2b0000; } /* violet */
-        70% { background-color: #4a0000; } /* indigo */
-        75% { background-color: #6d0000; } /* blue */
-        80% { background-color: #930000; } /* blue-green */
-        85% { background-color: #a90000; } /* green */
-        90% { background-color: #c50000; } /* yellow */
-        95% { background-color: #e80000; } /* orange */
-        100% { background-color: hsl(0, 97%, 49%); } /* red */
-      }
+        .separate   { width: 100%; height: 10em; }
+        .separate>* { width: 100%; height: 100%; margin-top: 1em; }
+
+        .overlay   { width: 100%; height: 10em; filter: brightness(3); }
+        .overlay>* { width: 100%; height: 100%; position: absolute; }
+        .overlay>:nth-of-type(1) { opacity: 1; }
+        .overlay>:nth-of-type(2) { opacity: .5; }
+        .overlay>:nth-of-type(3) { opacity: .33; }
+        .overlay>:nth-of-type(4) { opacity: .25; }
+
+        .blue   { background: linear-gradient(
+           90deg,                 rgb(0,0,256)  0%, rgb(0,0,256) 5%,  rgb(0,0,0) 20% ); }
+        .green  { background: linear-gradient(
+           90deg, rgb(0,0,0) 0%,  rgb(0,256,0) 25%, rgb(0,256,0) 35%, rgb(0,0,0) 55% ); }
+        .red    { background: linear-gradient(
+           90deg, rgb(0,0,0) 15%, rgb(256,0,0) 35%, rgb(256,0,0) 45%, rgb(0,0,0) 100% ); }
+        .blue2  { background: linear-gradient(
+           90deg, rgb(0,0,0) 65%, rgb(0,0,256) 95%, rgb(0,0,256) 100% ); }
     </style>
+</head>
+<body>
+<h1>Rainbow</h1>
+    <div class="overlay">
+        <div class="blue"></div>
+        <div class="green"></div>
+        <div class="red"></div>
+        <div class="blue2"></div>
+    </div>
+    <div class="separate">
+        <div class="blue"></div>
+        <div class="green"></div>
+        <div class="red"></div>
+        <div class="blue2"></div>
+    </div>
 	<html>
 
 <head>
