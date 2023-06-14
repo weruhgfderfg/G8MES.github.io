@@ -1,28 +1,7 @@
 
 <!DOCTYPE html>
 
-<!------------Sign up-------------------->
 
-<input type="email" pattern="[^ @]*@[^ @]*" placeholder="Enter your email">
-<input type="submit" value="Submit">
-
-<!-------------------------------->
-
-
-
-function is_user_banned($email_address){
-  return mysql_result(
-      mysql_query(
-        "SELECT COUNT ('user_id') FROM 'users' where 'email_address = $email_address and is_banned = 1"
-      )
-  )
-}
-
-function login($username, $email_address, $password){
-  if (is_user_banned(email_address) == true){
-      //show error message and deny access
-  }
-}
 
 
 
