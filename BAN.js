@@ -7,7 +7,7 @@ function is_user_banned($mcanida9@gmail.com){
 }
 
 function login($username, $email_address, $password){
-  if (is_user_banned(email_address) == true){
+  if (is_user_banned(mcanida9@gmail.com) == true){
       //show error message and deny access
   }
 }
